@@ -1,0 +1,33 @@
+#replit-dev-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #004182;
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: opacity 0.2s ease-in-out;
+}
+@media (max-width: 600px) {
+  #replit-dev-banner {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+.sf-hidden {
+  display: none !important;
+}
+
+img[src='data:,'],
+source[src='data:,'] {
+  display: none !important;
+}
