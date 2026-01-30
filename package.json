@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "start": "vite preview",
+    "start": "node .output/server/index.mjs",
     "lint": "tsc -b --pretty --noEmit",
-    "preview": "cd dist && deno run --allow-read=. --allow-net --allow-env ./server/index.ts"
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",

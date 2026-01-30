@@ -17,18 +17,11 @@ export default defineConfig({
     }),
     viteComponentMapper(),
     tanstackStart(),
-    nitro({
-      output: {
-        dir: 'dist',
-      },
-    }),
+    nitro(),
     // react's vite plugin must come after start's vite plugin
     viteReact(),
     tailwindcss(),
   ],
-  nitro: {
-    preset: 'deno-deploy',
-  },
   build: {
     sourcemap: 'hidden',
     rollupOptions: {

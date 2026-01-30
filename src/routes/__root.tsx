@@ -23,7 +23,7 @@ function RootDocument() {
         />
         <title>Nandini Srivastava</title>
         <link rel="stylesheet" href={globalCss} />
-        <link rel="icon" href="favicon.png" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>
         <TrpcProvider>
