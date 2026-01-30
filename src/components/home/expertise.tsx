@@ -8,7 +8,7 @@ export const Expertise = () => {
                     {/* Header */}
                     <div className="lg:col-span-4">
                         <div className="sticky top-24">
-                            <span className="text-accent-purple font-mono text-sm tracking-wider uppercase mb-4 block">[03] Capabilities</span>
+                            <span className="text-accent-purple font-bold text-sm tracking-widest uppercase mb-4 block">03 / Capabilities</span>
                             <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-none">
                                 CORE<br /><span className="text-stroke">STACK</span>
                             </h2>
@@ -16,13 +16,13 @@ export const Expertise = () => {
                                 Merging <span className="text-foreground border-b border-accent-purple">product strategy</span> with <span className="text-foreground border-b border-accent-teal">technical reality</span>.
                             </p>
 
-                            <div className="mt-12 p-6 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm relative overflow-hidden group">
+                            <div className="mt-12 p-6 border border-white/10 bg-white/5 backdrop-blur-sm relative overflow-hidden group rounded-none">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-purple to-accent-teal" />
-                                <h3 className="font-mono text-xs text-muted-foreground mb-4 font-bold uppercase">Technical_Toolbelt.json</h3>
-                                <div className="flex flex-wrap gap-2 font-mono text-sm text-foreground/80">
+                                <h3 className="font-bold text-xs text-white mb-4 uppercase tracking-widest">Strategic Toolkit</h3>
+                                <div className="flex flex-wrap gap-2 text-sm text-foreground/80">
                                     {['SQL', 'Python', 'Tableau', 'Google Analytics', 'Linear', 'Figma', 'Cursor', 'Claude'].map((tool, i) => (
-                                        <span key={tool} className="hover:text-accent-teal transition-colors">
-                                            "{tool}"{i !== 7 && ','}
+                                        <span key={tool} className="px-2 py-1 bg-black/50 border border-white/5 hover:border-white/30 hover:text-white transition-colors cursor-default">
+                                            {tool}
                                         </span>
                                     ))}
                                 </div>
@@ -35,32 +35,32 @@ export const Expertise = () => {
                         {[
                             {
                                 title: 'Product Strategy',
-                                id: 'STRAT_01',
+                                id: '01',
                                 desc: 'PRDs, roadmap slices, crisp scope.',
                             },
                             {
                                 title: 'GTM + Growth',
-                                id: 'GROWTH_02',
+                                id: '02',
                                 desc: 'Positioning, trials, conversion levers.',
                             },
                             {
                                 title: 'Onboarding',
-                                id: 'UX_03',
+                                id: '03',
                                 desc: 'Funnels, lifecycle, in-app guidance.',
                             },
                             {
                                 title: 'Analytics',
-                                id: 'DATA_04',
+                                id: '04',
                                 desc: 'SQL-first insights → shipped changes.',
                             },
                             {
                                 title: 'Legal Tech',
-                                id: 'DOMAIN_05',
+                                id: '05',
                                 desc: 'Contracts, workflows, buyer empathy.',
                             },
                             {
                                 title: 'Cross-functional',
-                                id: 'OPS_06',
+                                id: '06',
                                 desc: 'Eng + sales alignment, fast iteration.',
                             },
                         ].map((skill, index) => (
@@ -75,15 +75,15 @@ export const Expertise = () => {
                                 <div className="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-white/30" />
 
                                 <div>
-                                    <span className="font-mono text-[10px] text-accent-teal mb-2 block tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
-                      //{skill.id}
+                                    <span className="font-bold text-xs text-accent-teal mb-3 block tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
+                                        {skill.id}
                                     </span>
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-accent-purple transition-colors">
                                         {skill.title}
                                     </h3>
                                 </div>
 
-                                <p className="text-muted-foreground text-sm font-light border-t border-dashed border-white/10 pt-4 group-hover:border-accent-purple/30 transition-colors">
+                                <p className="text-muted-foreground text-sm font-light border-t border-white/5 pt-4 group-hover:border-accent-purple/30 transition-colors">
                                     {skill.desc}
                                 </p>
 

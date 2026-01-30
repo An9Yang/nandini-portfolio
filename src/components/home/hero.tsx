@@ -57,31 +57,64 @@ export const Hero = () => {
                 {/* Right Column: Abstract Visualization */}
                 <div className="lg:col-span-4 relative hidden lg:block h-[600px]">
                     {/* Abstract Floating Cards / Elements */}
-                    <div className="absolute top-10 right-0 w-64 h-80 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-xl rounded-none rotate-6 z-10 p-6 flex flex-col justify-between hover:rotate-2 hover:scale-105 transition-all duration-500">
-                        <div className="w-8 h-8 bg-accent-purple/20 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-accent-purple" />
+                    {/* Card 1: Growth/Metric Visualization */}
+                    <div className="absolute top-10 right-0 w-64 h-80 bg-black/40 border border-white/10 backdrop-blur-md rounded-none rotate-6 z-10 p-6 flex flex-col hover:rotate-2 hover:scale-105 transition-all duration-500 hover:border-accent-purple/30">
+                        <div className="flex justify-between items-start mb-6">
+                            <div className="space-y-1">
+                                <div className="h-1 w-12 bg-white/20" />
+                                <div className="h-1 w-8 bg-white/10" />
+                            </div>
+                            <div className="text-[10px] font-mono text-accent-teal tracking-wider">+24.5%</div>
                         </div>
-                        <div className="space-y-3">
-                            <div className="h-2 w-2/3 bg-white/10" />
-                            <div className="h-2 w-full bg-white/5" />
-                            <div className="h-2 w-1/2 bg-white/5" />
+
+                        {/* Abstract Bar Chart */}
+                        <div className="flex items-end justify-between h-40 gap-2 mb-4">
+                            <div className="w-full bg-white/5 h-[30%] relative group-hover:bg-accent-purple/20 transition-colors" />
+                            <div className="w-full bg-white/5 h-[45%] relative group-hover:bg-accent-purple/30 transition-colors" />
+                            <div className="w-full bg-white/5 h-[35%] relative group-hover:bg-accent-purple/20 transition-colors" />
+                            <div className="w-full bg-white/5 h-[60%] relative group-hover:bg-accent-purple/40 transition-colors" />
+                            <div className="w-full bg-white/5 h-[80%] relative group-hover:bg-accent-purple/60 transition-colors" />
+                        </div>
+
+                        <div className="mt-auto pt-4 border-t border-white/5 flex gap-2">
+                            <div className="w-2 h-2 bg-accent-purple rounded-none" />
+                            <div className="text-[9px] text-muted-foreground uppercase tracking-widest">Retention Cohorts</div>
                         </div>
                     </div>
 
-                    <div className="absolute top-40 -left-10 w-72 h-64 bg-[#0a0a0a] border border-accent-teal/20 rounded-none -rotate-3 z-20 p-6 shadow-2xl shadow-black/50 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
-                        <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-4">
-                            <div className="w-3 h-3 bg-red-500/50" />
-                            <div className="w-3 h-3 bg-yellow-500/50" />
-                            <div className="w-3 h-3 bg-green-500/50" />
+                    {/* Card 2: Strategic Workflow */}
+                    <div className="absolute top-40 -left-10 w-72 h-64 bg-[#0a0a0a] border border-white/10 rounded-none -rotate-3 z-20 p-6 shadow-2xl shadow-black/50 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
+                        <div className="flex items-center justify-between mb-6 border-b border-white/5 pb-4">
+                            <span className="text-[10px] font-bold text-white uppercase tracking-widest">GTM_Strategy</span>
+                            <div className="flex gap-1">
+                                <div className="w-1 h-1 bg-white/20" />
+                                <div className="w-1 h-1 bg-white/20" />
+                                <div className="w-1 h-1 bg-white/20" />
+                            </div>
                         </div>
-                        <div className="font-mono text-xs text-muted-foreground/50 space-y-2">
-                            <p><span className="text-accent-purple">const</span> <span className="text-accent-teal">growth</span> = <span className="text-white">require</span>('strategy');</p>
-                            <p><span className="text-accent-purple">function</span> <span className="text-yellow-200">scale</span>() {`{`}</p>
-                            <p className="pl-4 text-muted-foreground">return impact * velocity;</p>
-                            <p>{`}`}</p>
+
+                        <div className="space-y-4 relative">
+                            {/* Flow steps */}
+                            <div className="flex items-center gap-3">
+                                <div className="w-6 h-6 border border-white/20 flex items-center justify-center text-[10px] text-muted-foreground">1</div>
+                                <div className="h-0.5 flex-1 bg-white/10" />
+                                <div className="text-xs text-muted-foreground">User Acquisition</div>
+                            </div>
+                            <div className="flex items-center gap-3 pl-4">
+                                <div className="w-px h-4 bg-white/10 absolute left-[3.25rem] -top-3" />
+                                <div className="w-6 h-6 border border-accent-teal/30 bg-accent-teal/5 flex items-center justify-center text-[10px] text-accent-teal">2</div>
+                                <div className="h-0.5 flex-1 bg-gradient-to-r from-accent-teal/50 to-transparent" />
+                                <div className="text-xs text-white">Activation</div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-6 h-6 border border-white/20 flex items-center justify-center text-[10px] text-muted-foreground">3</div>
+                                <div className="h-0.5 flex-1 bg-white/10" />
+                                <div className="text-xs text-muted-foreground">Expansion</div>
+                            </div>
                         </div>
+
                         {/* Glow effect on hover */}
-                        <div className="absolute inset-0 bg-accent-teal/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                        <div className="absolute inset-0 bg-accent-purple/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                     </div>
 
                     {/* Decorative Lines */}
