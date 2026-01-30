@@ -7,13 +7,13 @@ export const Footer = () => {
                     © {new Date().getFullYear()} Nandini Srivastava. All rights reserved.
                 </p>
                 <div className="flex gap-8">
-                    <a href="https://github.com/NandiniLearnsCode" className="text-sm text-muted-foreground hover:text-accent-purple transition-colors font-medium">
+                    <a href="https://github.com/NandiniLearnsCode" className="text-sm text-muted-foreground hover:text-accent-blue transition-colors font-medium">
                         GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/nandini-srivastava/" className="text-sm text-muted-foreground hover:text-accent-purple transition-colors font-medium">
+                    <a href="https://www.linkedin.com/in/nandini-srivastava/" className="text-sm text-muted-foreground hover:text-accent-blue transition-colors font-medium">
                         LinkedIn
                     </a>
-                    <a href="mailto:nsrivastava26@gsb.columbia.edu" className="text-sm text-muted-foreground hover:text-accent-purple transition-colors font-medium">
+                    <a href="mailto:nsrivastava26@gsb.columbia.edu" className="text-sm text-muted-foreground hover:text-accent-blue transition-colors font-medium">
                         Email
                     </a>
                 </div>

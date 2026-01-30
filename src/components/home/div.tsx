@@ -11,7 +11,7 @@ import { FadeIn } from '../ui/fade-in';
 
 export const Div = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent-purple/30 selection:text-foreground relative">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent-blue/30 selection:text-foreground relative">
       <div className="bg-noise" />
       <Navbar />
       <Hero />

@@ -21,8 +21,8 @@ export const Story = () => {
                                 { label: 'NOW', desc: 'MBA at Columbia focused on Product, Data Analytics & AI — building practical AI tools.' },
                             ].map((item, i) => (
                                 <div key={item.label} className="relative group">
-                                    <div className="absolute -left-[54px] top-1 w-3 h-3 bg-black border border-white/30 rotate-45 group-hover:bg-accent-purple group-hover:border-accent-purple transition-colors" />
-                                    <h3 className="font-mono text-sm tracking-widest text-accent-purple mb-2 uppercase">{item.label}</h3>
+                                    <div className="absolute -left-[54px] top-1 w-3 h-3 bg-black border border-white/30 rotate-45 group-hover:bg-accent-blue group-hover:border-accent-blue transition-colors" />
+                                    <h3 className="font-mono text-sm tracking-widest text-accent-blue mb-2 uppercase">{item.label}</h3>
                                     <p className="text-muted-foreground text-lg leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
@@ -31,7 +31,7 @@ export const Story = () => {
 
                     <div className="space-y-8 lg:pt-24">
                         {/* Education */}
-                        <TechCard className="p-10 hover:border-accent-purple/30">
+                        <TechCard className="p-10 hover:border-accent-blue/30">
                             <div className="absolute top-0 right-0 p-2 opacity-50">
                                 <span className="text-[10px] font-mono border border-white/20 px-1">EDU_LOG</span>
                             </div>
@@ -39,7 +39,7 @@ export const Story = () => {
                             <div className="space-y-8">
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-1">
-                                        <h4 className="font-bold text-lg group-hover:text-accent-purple transition-colors">Columbia Business School</h4>
+                                        <h4 className="font-bold text-lg group-hover:text-accent-blue transition-colors">Columbia Business School</h4>
                                         <span className="font-mono text-sm text-muted-foreground">2024 - 2026</span>
                                     </div>
                                     <p className="text-sm text-muted-foreground">Master of Business Administration (MBA)</p>
@@ -47,7 +47,7 @@ export const Story = () => {
                                 <div className="w-full h-px bg-white/10" />
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-1">
-                                        <h4 className="font-bold text-lg group-hover:text-accent-purple transition-colors">McGill University</h4>
+                                        <h4 className="font-bold text-lg group-hover:text-accent-blue transition-colors">McGill University</h4>
                                         <span className="font-mono text-sm text-muted-foreground">2014 - 2017</span>
                                     </div>
                                     <p className="text-sm text-muted-foreground">Bachelor of Arts (B.A.)</p>

@@ -6,7 +6,7 @@ interface TechCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
     className?: string;
     cornerSize?: "sm" | "md" | "lg";
-    accentColor?: string; // e.g. "border-accent-purple"
+    accentColor?: string; // e.g. "border-accent-blue"
 }
 
 export const TechCard = ({
@@ -22,8 +22,6 @@ export const TechCard = ({
                 "relative bg-[#0c0c0c] overflow-hidden group/card",
                 className
             )}
-            whileHover={{ y: -5, scale: 1.005 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             {...props}
         >
             {/* 
@@ -46,7 +44,7 @@ export const TechCard = ({
                     ease: "linear"
                 }}
                 style={{
-                    backgroundImage: "radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at center, rgba(0, 193, 162, 0.15) 0%, transparent 50%)",
+                    backgroundImage: "radial-gradient(circle at center, rgba(91, 157, 191, 0.15) 0%, transparent 50%), radial-gradient(circle at center, rgba(66, 158, 139, 0.15) 0%, transparent 50%)",
                     backgroundSize: "100% 100%", // Static size, moving position logic handled differently below if needed
                 }}
             />
@@ -61,7 +59,7 @@ export const TechCard = ({
                     animate={{ rotate: 360 }}
                     transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                     style={{
-                        background: "conic-gradient(from 0deg, transparent 0 340deg, rgba(139,92,246,0.6) 360deg)"
+                        background: "conic-gradient(from 0deg, transparent 0 340deg, rgba(91, 157, 191,0.6) 360deg)"
                     }}
                 />
             </div>
@@ -71,8 +69,8 @@ export const TechCard = ({
 
 
             {/* Corner Accents (Above everything) */}
-            <div className={cn("absolute top-0 left-0 border-l border-t w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-purple z-30", accentColor)} />
-            <div className={cn("absolute top-0 right-0 border-r border-t w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-purple z-30", accentColor)} />
+            <div className={cn("absolute top-0 left-0 border-l border-t w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-blue z-30", accentColor)} />
+            <div className={cn("absolute top-0 right-0 border-r border-t w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-blue z-30", accentColor)} />
             <div className={cn("absolute bottom-0 left-0 border-l border-b w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-teal z-30", accentColor)} />
             <div className={cn("absolute bottom-0 right-0 border-r border-b w-2 h-2 pointer-events-none transition-colors duration-300 group-hover/card:border-accent-teal z-30", accentColor)} />
 

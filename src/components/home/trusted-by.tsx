@@ -8,7 +8,7 @@ export const TrustedBy = () => {
                 </p>
                 <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                     {['Salesforce', 'Sprout Social', 'Kira Systems', 'DraftWise', 'Noetica AI'].map((company) => (
-                        <span key={company} className="text-xl font-medium text-foreground/80 hover:text-accent-purple cursor-default transition-colors">
+                        <span key={company} className="text-xl font-medium text-foreground/80 hover:text-accent-blue cursor-default transition-colors">
                             {company}
                         </span>
                     ))}

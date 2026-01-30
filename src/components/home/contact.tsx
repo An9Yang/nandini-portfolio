@@ -10,7 +10,7 @@ export const Contact = () => {
                         <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter">
                             LET'S BUILD SOMETHING
                             <br />
-                            <span className="text-accent-purple">EXTRAORDINARY</span>
+                            <span className="text-accent-blue">EXTRAORDINARY</span>
                         </h2>
                         <p className="text-xl text-muted-foreground mb-12 max-w-lg mx-auto leading-relaxed">
                             If you're hiring for Product or GTM roles, email is best — I respond quickly.

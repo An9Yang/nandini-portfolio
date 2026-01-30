@@ -17,10 +17,10 @@ export const Projects = () => {
                             Building in public. <span className="text-accent-teal">Solving real problems.</span>
                         </p>
                     </div>
-                    <div className="flex items-center gap-2 text-sm font-mono text-accent-purple border border-accent-purple/30 px-4 py-2 bg-accent-purple/5">
+                    <div className="flex items-center gap-2 text-sm font-mono text-accent-blue border border-accent-blue/30 px-4 py-2 bg-accent-blue/5">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full bg-accent-purple opacity-75"></span>
-                            <span className="relative inline-flex h-2 w-2 bg-accent-purple"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full bg-accent-blue opacity-75"></span>
+                            <span className="relative inline-flex h-2 w-2 bg-accent-blue"></span>
                         </span>
                         3 ACTIVE PROJECTS
                     </div>
@@ -31,7 +31,7 @@ export const Projects = () => {
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-6 grid-auto-rows-[minmax(350px,auto)]">
 
                     {/* Card 1: Large Featured (Spans 4 cols) */}
-                    <TechCard className="md:col-span-4 h-full min-h-[400px] group overflow-hidden border-white/10 hover:border-accent-purple/50 transition-colors duration-500">
+                    <TechCard className="md:col-span-4 h-full min-h-[400px] group overflow-hidden border-white/10 hover:border-accent-blue/50 transition-colors duration-500">
                         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1639322537228-ad7117a3a63b?q=80&w=3270&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:opacity-10 transition-opacity duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
@@ -41,73 +41,109 @@ export const Projects = () => {
                             <div className="w-2 h-2 bg-white/10" />
                         </div>
 
-                        <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                            <div className="mb-auto flex justify-between items-start">
-                                <span className="px-3 py-1 bg-accent-purple text-black font-bold text-xs uppercase tracking-wider rounded-none">Featured</span>
-                                <div className="w-12 h-12 border border-white/20 flex items-center justify-center group-hover:border-accent-purple group-hover:text-accent-purple transition-all hover:rotate-[90deg] cursor-pointer bg-black/50 backdrop-blur-sm">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                                </div>
+                        <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                            <div className="mb-auto">
+                                <span className="px-3 py-1 bg-accent-blue text-black font-bold text-xs uppercase tracking-wider rounded-none">Featured</span>
                             </div>
 
                             <h3 className="text-4xl font-bold mb-4 text-white group-hover:translate-x-2 transition-transform duration-300">ML for SMB Funding</h3>
                             <p className="text-muted-foreground text-lg max-w-xl mb-6">Using machine learning models to accelerate funding decisions for small businesses, reducing risk while increasing approval speed.</p>
-                            <div className="flex gap-3">
-                                {['Machine Learning', 'Fintech', 'Python'].map(tag => (
-                                    <span key={tag} className="text-xs font-bold tracking-wide text-zinc-400 border border-zinc-800 px-3 py-1 bg-zinc-900/50">{tag}</span>
-                                ))}
+                            <div className="flex justify-between items-end border-t border-white/5 pt-6">
+                                <div className="flex gap-3">
+                                    {['Machine Learning', 'Fintech', 'Python'].map(tag => (
+                                        <span key={tag} className="text-xs font-bold tracking-wide text-zinc-400 border border-zinc-800 px-3 py-1 bg-zinc-900/50">{tag}</span>
+                                    ))}
+                                </div>
+                                <div className="p-2 border border-white/10 hover:bg-white hover:text-black transition-colors cursor-pointer">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                                </div>
                             </div>
                         </div>
                     </TechCard>
 
                     {/* Card 2: Vertical (Spans 2 cols) */}
-                    <TechCard className="md:col-span-2 h-full min-h-[400px] group overflow-hidden border-white/10 hover:border-accent-teal/50 transition-colors duration-500 flex flex-col">
-                        <div className="flex-1 bg-gradient-to-br from-zinc-900 to-black p-8 relative overflow-hidden group-hover:from-zinc-900/80 transition-colors border-b border-white/5 flex flex-col justify-center">
-                            {/* Visual: Abstract Wave/Graph instead of Code */}
-                            <div className="absolute inset-0 opacity-20 flex items-center justify-center">
-                                <div className="w-[120%] h-[120%] border-[20px] border-accent-teal/20 rounded-full blur-[40px]" />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="text-6xl font-bold text-transparent text-stroke-sm opacity-20">99.9%</div>
-                                <div className="text-sm tracking-widest text-accent-teal uppercase font-bold mt-2">Accuracy</div>
-                            </div>
+                    <TechCard className="md:col-span-2 h-full min-h-[400px] group overflow-hidden border-white/10 hover:border-accent-teal/50 transition-colors duration-500 relative">
+                        {/* Gradient background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 to-black" />
+
+                        {/* Visual: Abstract Wave/Graph */}
+                        <div className="absolute inset-0 opacity-20 flex items-center justify-center pointer-events-none">
+                            <div className="w-[120%] h-[120%] border-[20px] border-accent-teal/20 rounded-full blur-[40px]" />
                         </div>
-                        <div className="p-8 bg-black relative">
-                            <h3 className="text-2xl font-bold mb-2 group-hover:text-accent-teal transition-colors">News Guardian</h3>
-                            <p className="text-sm text-muted-foreground mb-6">Real-time news evaluation tool.</p>
-                            <a href="https://github.com/NandiniLearnsCode/News-Guardian" target="_blank" className="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-white flex items-center gap-2">
-                                View Project <span className="w-4 h-px bg-zinc-500 group-hover:bg-white transition-colors" />
-                            </a>
+
+                        {/* Decorative 99.9% in background */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
+                            <div className="text-7xl font-bold text-accent-teal/20 text-stroke-sm">99.9%</div>
+                        </div>
+
+                        <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div className="mb-6">
+                                    <span className="px-3 py-1 bg-accent-teal text-black font-bold text-xs uppercase tracking-wider">Accuracy</span>
+                                </div>
+                                <h3 className="text-2xl font-bold mb-2 group-hover:text-accent-teal transition-colors">News Guardian</h3>
+                                <p className="text-muted-foreground text-sm">Real-time news evaluation tool.</p>
+                            </div>
+                            <div className="flex justify-between items-end border-t border-white/5 pt-6 mt-6">
+                                <a href="https://github.com/NandiniLearnsCode/News-Guardian" target="_blank" className="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-white flex items-center gap-2">
+                                    View Project <span className="w-4 h-px bg-zinc-500 group-hover:bg-white transition-colors" />
+                                </a>
+                                <a href="https://github.com/NandiniLearnsCode/News-Guardian" target="_blank" className="p-2 border border-white/10 hover:bg-white hover:text-black transition-colors">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                                </a>
+                            </div>
                         </div>
                     </TechCard>
 
                     {/* Card 3: Horizontal (Spans 3 cols) */}
-                    <TechCard className="md:col-span-3 h-full min-h-[300px] group border-white/10 hover:border-blue-500/50 transition-colors duration-500 p-8 flex flex-col justify-between">
-                        <div>
-                            <div className="w-10 h-10 bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6 border border-blue-500/20">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
-                            </div>
-                            <h3 className="text-2xl font-bold mb-2">CBS Orientation Bot</h3>
-                            <p className="text-muted-foreground text-sm max-w-sm">RAG-powered chatbot helping 500+ students navigate integration week.</p>
+                    <TechCard className="md:col-span-3 h-full min-h-[300px] group border-white/10 hover:border-accent-blue/50 transition-colors duration-500 overflow-hidden relative">
+                        {/* Gradient overlay for visual consistency */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 to-black" />
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute -right-20 -top-20 w-40 h-40 border-[10px] border-accent-blue/30 rounded-full blur-[30px]" />
                         </div>
-                        <div className="flex justify-between items-end border-t border-white/5 pt-6 mt-6">
-                            <div className="flex -space-x-2">
-                                <div className="w-8 h-8 rounded-none bg-zinc-800 border-2 border-black" />
-                                <div className="w-8 h-8 rounded-none bg-zinc-700 border-2 border-black" />
+
+                        <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div className="mb-6">
+                                    <span className="px-3 py-1 bg-accent-blue text-black font-bold text-xs uppercase tracking-wider rounded-none">Chatbot</span>
+                                </div>
+                                <h3 className="text-2xl font-bold mb-2">CBS Orientation Bot</h3>
+                                <p className="text-muted-foreground text-sm max-w-sm">RAG-powered chatbot helping 500+ students navigate integration week.</p>
                             </div>
-                            <a href="https://github.com/NandiniLearnsCode/CBS-Orientation-Bot" className="p-2 border border-white/10 hover:bg-white hover:text-black transition-colors">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </a>
+                            <div className="flex justify-between items-end border-t border-white/5 pt-6 mt-6">
+                                <div className="flex -space-x-2">
+                                    <div className="w-8 h-8 rounded-none bg-zinc-800 border-2 border-black" />
+                                    <div className="w-8 h-8 rounded-none bg-zinc-700 border-2 border-black" />
+                                </div>
+                                <a href="https://github.com/NandiniLearnsCode/CBS-Orientation-Bot" className="p-2 border border-white/10 hover:bg-white hover:text-black transition-colors">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                                </a>
+                            </div>
                         </div>
                     </TechCard>
 
                     {/* Card 4: Horizontal (Spans 3 cols) */}
-                    <TechCard className="md:col-span-3 h-full min-h-[300px] group border-white/10 bg-gradient-to-br from-zinc-900 to-black p-8 flex items-center justify-center">
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold mb-2 text-zinc-700 group-hover:text-white transition-colors duration-500">More on GitHub</h3>
-                            <p className="text-zinc-600 mb-6 font-mono text-xs">Explore experiments and side quests.</p>
-                            <a href="https://github.com/NandiniLearnsCode" className="inline-block px-6 py-3 border border-zinc-700 text-zinc-400 hover:text-white hover:border-white transition-colors rounded-none font-medium">
-                                @NandiniLearnsCode
-                            </a>
+                    <TechCard className="md:col-span-3 h-full min-h-[300px] group border-white/10 hover:border-white/30 transition-colors duration-500 overflow-hidden relative">
+                        {/* Gradient overlay for visual consistency */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 to-black" />
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute -left-20 -bottom-20 w-40 h-40 border-[10px] border-white/20 rounded-full blur-[30px]" />
+                        </div>
+
+                        <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div className="mb-6">
+                                    <span className="px-3 py-1 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-none">Open Source</span>
+                                </div>
+                                <h3 className="text-2xl font-bold mb-2 group-hover:text-white transition-colors duration-500">More on GitHub</h3>
+                                <p className="text-muted-foreground text-sm">Explore experiments and side quests.</p>
+                            </div>
+                            <div>
+                                <a href="https://github.com/NandiniLearnsCode" className="inline-block px-6 py-3 border border-zinc-700 text-zinc-400 hover:text-white hover:border-white transition-colors rounded-none font-medium">
+                                    @NandiniLearnsCode
+                                </a>
+                            </div>
                         </div>
                     </TechCard>
 

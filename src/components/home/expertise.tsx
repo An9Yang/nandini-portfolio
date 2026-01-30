@@ -8,16 +8,16 @@ export const Expertise = () => {
                     {/* Header */}
                     <div className="lg:col-span-4">
                         <div className="sticky top-24">
-                            <span className="text-accent-purple font-bold text-sm tracking-widest uppercase mb-4 block">03 / Capabilities</span>
+                            <span className="text-accent-blue font-bold text-sm tracking-widest uppercase mb-4 block">03 / Capabilities</span>
                             <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-none">
                                 CORE<br /><span className="text-stroke">STACK</span>
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed max-w-sm">
-                                Merging <span className="text-foreground border-b border-accent-purple">product strategy</span> with <span className="text-foreground border-b border-accent-teal">technical reality</span>.
+                                Merging <span className="text-foreground border-b border-accent-blue">product strategy</span> with <span className="text-foreground border-b border-accent-teal">technical reality</span>.
                             </p>
 
                             <div className="mt-12 p-6 border border-white/10 bg-white/5 backdrop-blur-sm relative overflow-hidden group rounded-none">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-purple to-accent-teal" />
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-blue to-accent-teal" />
                                 <h3 className="font-bold text-xs text-white mb-4 uppercase tracking-widest">Strategic Toolkit</h3>
                                 <div className="flex flex-wrap gap-2 text-sm text-foreground/80">
                                     {['SQL', 'Python', 'Tableau', 'Google Analytics', 'Linear', 'Figma', 'Cursor', 'Claude'].map((tool, i) => (
@@ -66,7 +66,7 @@ export const Expertise = () => {
                         ].map((skill, index) => (
                             <div
                                 key={skill.title}
-                                className="group relative p-8 bg-[#0c0c0c] border border-white/10 hover:border-accent-purple/50 transition-all duration-300 min-h-[220px] flex flex-col justify-between"
+                                className="group relative p-8 bg-[#0c0c0c] border border-white/10 hover:border-accent-blue/50 transition-all duration-300 min-h-[220px] flex flex-col justify-between"
                             >
                                 {/* Corner Accents */}
                                 <div className="absolute top-0 left-0 w-2 h-2 border-l border-t border-white/30" />
@@ -78,18 +78,19 @@ export const Expertise = () => {
                                     <span className="font-bold text-xs text-accent-teal mb-3 block tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
                                         {skill.id}
                                     </span>
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-accent-purple transition-colors">
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-accent-blue transition-colors">
                                         {skill.title}
                                     </h3>
                                 </div>
 
-                                <p className="text-muted-foreground text-sm font-light border-t border-white/5 pt-4 group-hover:border-accent-purple/30 transition-colors">
+                                <p className="text-muted-foreground text-sm font-light border-t border-white/5 pt-4 group-hover:border-accent-blue/30 transition-colors">
                                     {skill.desc}
                                 </p>
 
                                 {/* Hover Glow */}
-                                <div className="absolute inset-0 bg-accent-purple/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                                <div className="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                             </div>
+
                         ))}
                     </div>
 
