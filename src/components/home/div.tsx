@@ -7,6 +7,7 @@ import { Projects } from './projects';
 import { Story } from './story';
 import { Contact } from './contact';
 import { Footer } from './footer';
+import { FadeIn } from '../ui/fade-in';
 
 export const Div = () => {
   return (
@@ -14,11 +15,21 @@ export const Div = () => {
       <div className="bg-noise" />
       <Navbar />
       <Hero />
-      <TrustedBy />
-      <Expertise />
-      <Projects />
-      <Story />
-      <Contact />
+      <FadeIn delay={0.2}>
+        <TrustedBy />
+      </FadeIn>
+      <FadeIn>
+        <Expertise />
+      </FadeIn>
+      <FadeIn>
+        <Projects />
+      </FadeIn>
+      <FadeIn>
+        <Story />
+      </FadeIn>
+      <FadeIn>
+        <Contact />
+      </FadeIn>
       <Footer />
     </div>
   );

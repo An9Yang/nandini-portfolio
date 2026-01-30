@@ -1,9 +1,12 @@
 // @ts-nocheck
+import { FlowingGridBackground } from "./flowing-grid-background";
+
 export const Hero = () => {
     return (
         <section className="min-h-screen relative flex flex-col justify-center overflow-hidden pt-20">
-            {/* Background Grid */}
-            <div className="absolute inset-0 bg-dot-white [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)] pointer-events-none" />
+            {/* Dynamic Background */}
+            <FlowingGridBackground />
+            <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)] pointer-events-none" />
 
             {/* Decorative Gradient Splashes */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-purple/10 rounded-full blur-[120px] mix-blend-screen opacity-50" />
