@@ -57,22 +57,22 @@ export const Hero = () => {
                 {/* Right Column: Abstract Visualization */}
                 <div className="lg:col-span-4 relative hidden lg:block h-[600px]">
                     {/* Abstract Floating Cards / Elements */}
-                    <div className="absolute top-10 right-0 w-64 h-80 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-xl rounded-2xl rotate-6 z-10 p-6 flex flex-col justify-between hover:rotate-2 hover:scale-105 transition-all duration-500">
-                        <div className="w-8 h-8 rounded-full bg-accent-purple/20 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-accent-purple rounded-full" />
+                    <div className="absolute top-10 right-0 w-64 h-80 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-xl rounded-none rotate-6 z-10 p-6 flex flex-col justify-between hover:rotate-2 hover:scale-105 transition-all duration-500">
+                        <div className="w-8 h-8 bg-accent-purple/20 flex items-center justify-center">
+                            <div className="w-3 h-3 bg-accent-purple" />
                         </div>
                         <div className="space-y-3">
-                            <div className="h-2 w-2/3 bg-white/10 rounded-full" />
-                            <div className="h-2 w-full bg-white/5 rounded-full" />
-                            <div className="h-2 w-1/2 bg-white/5 rounded-full" />
+                            <div className="h-2 w-2/3 bg-white/10" />
+                            <div className="h-2 w-full bg-white/5" />
+                            <div className="h-2 w-1/2 bg-white/5" />
                         </div>
                     </div>
 
-                    <div className="absolute top-40 -left-10 w-72 h-64 bg-[#0a0a0a] border border-accent-teal/20 rounded-2xl -rotate-3 z-20 p-6 shadow-2xl shadow-black/50 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
+                    <div className="absolute top-40 -left-10 w-72 h-64 bg-[#0a0a0a] border border-accent-teal/20 rounded-none -rotate-3 z-20 p-6 shadow-2xl shadow-black/50 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
                         <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-4">
-                            <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                            <div className="w-3 h-3 bg-red-500/50" />
+                            <div className="w-3 h-3 bg-yellow-500/50" />
+                            <div className="w-3 h-3 bg-green-500/50" />
                         </div>
                         <div className="font-mono text-xs text-muted-foreground/50 space-y-2">
                             <p><span className="text-accent-purple">const</span> <span className="text-accent-teal">growth</span> = <span className="text-white">require</span>('strategy');</p>
@@ -81,7 +81,7 @@ export const Hero = () => {
                             <p>{`}`}</p>
                         </div>
                         {/* Glow effect on hover */}
-                        <div className="absolute inset-0 bg-accent-teal/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                        <div className="absolute inset-0 bg-accent-teal/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                     </div>
 
                     {/* Decorative Lines */}
